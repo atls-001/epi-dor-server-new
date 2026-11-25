@@ -34,7 +34,7 @@ app.use(cookieParser())
 app.use(cors({
     credentials: true,
     origin: [
-        "http://localhost:7010", "https://main.d3mnoq1bc4tbv7.amplifyapp.com/", 
+        "http://localhost:7010", "https://main.d3mnoq1bc4tbv7.amplifyapp.com", 
         "http://localhost:7011"]
 
 }))
@@ -59,6 +59,7 @@ const statisticsRouter = require('./routers/statistics-router.js')
 const menuRouter = require('./routers/menu-router.js')
 const locationsRouter = require('./routers/location-router.js')
 const eventsRouter = require('./routers/events-router.js')
+const staffRouter = require('./routers/staff-router.js')
 const userRouter = require('./routers/user-router.js')
 const authRouter = require('./routers/auth-router.js')
 app.use('/general', generalRouter) 
@@ -66,5 +67,6 @@ app.use('/statistics', statisticsRouter)
 app.use('/menu', menuRouter) 
 app.use('/locations', locationsRouter) 
 app.use('/events', eventsRouter) 
+app.use('/staff', staffRouter)
 app.use('/users', userRouter) 
 app.use('/auth', authRouter) 
